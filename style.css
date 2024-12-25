@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to top, #8f0c0c, black);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery {
+    width: 55vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 120px;
+    gap: 7px;
+
+}
+
+.box {
+    cursor: pointer;
+    background-size: cover;
+    background-color: rgb(95, 1, 1);
+    background-blend-mode: hard-light;
+
+    transition: all 0.8s ease;
+    box-shadow: 0.3px 0.3px 30px rgba(22, 0, 0, 0.795);
+}
+
+
+#big-item {
+    background-position: right;
+    grid-row: span 3;
+}
+
+#big-item:hover {
+    background-color: red;
+    background-position: left;
+}
+
+#medium-item {
+    background-position: bottom;
+    grid-row: span 2;
+}
+
+#medium-item:hover {
+    background-position: top;
+    background-color: red;
+}
+
+#small-item {
+    background-position-y: -20px;
+}
+
+#small-item:hover {
+    background-position-y: -145px;
+    background-color: rgb(190, 28, 28);
+}
+
+h1 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 7rem;
+    margin: 3rem 0;
+    color: #d40202f5;
+    /* letter-spacing: 10px; */
+    text-shadow: 0.5px 0.5px 20px rgba(0, 0, 0, 0.247);
+}
+
+footer {
+    margin-top: auto;
+    height: 0.8rem;
+    width: 100%;
+    background-color: rgb(71, 1, 1);
+    border-top: 0.3px solid rgba(255, 0, 0, 0.575);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 6.5rem;
+    }
+
+    .gallery {
+        width: 80%;
+        gap: 20px;
+    }
+
+    #small-item {
+        grid-row: span 3;
+        grid-column: span 3;
+
+    }
+
+    #medium-item {
+        grid-row: span 3;
+        grid-column: span 3;
+    }
+
+    #big-item {
+        grid-row: span 3;
+        grid-column: span 3;
+        background-position: top;
+    }
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 320px){
+    h1{
+        font-size: 4.5rem;
+    }
+}
