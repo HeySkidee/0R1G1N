@@ -19,7 +19,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 8.5vw;
-    gap: 7px;
+    /* gap: 7px; */
+    gap: 0.5vw;
 
 }
 
@@ -65,8 +66,8 @@ body {
 
 h1 {
     font-family: "Libre Baskerville", serif;
-    font-size: 7rem;
-    margin: 3rem 0;
+    font-size: 8.2vw;
+    margin: 3.5vw 0;
     color: #d40202f5;
     /* letter-spacing: 10px; */
     text-shadow: 0.5px 0.5px 20px rgba(0, 0, 0, 0.247);
